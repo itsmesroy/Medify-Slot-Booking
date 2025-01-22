@@ -4,11 +4,11 @@ import {
   Typography,
   Container,
   Stack,
-  Link,
   Button,
   IconButton,
   useMediaQuery,
 } from "@mui/material";
+import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import CloseIcon from "@mui/icons-material/Close";
 import MenuIcon from "@mui/icons-material/Menu";
@@ -18,12 +18,14 @@ function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <Box p={1} bgcolor="primary.main">
-      <Typography fontSize={14} textAlign="center" color="#fff">
+    <header>
+    <Box>
+      <Typography className="navbar" fontSize={14} textAlign="center" color="#fff">
         The health and well-being of our patients and their health care team
         will always be our priority, so we follow the best practices for
         cleanliness.
       </Typography>
+      </Box>
       <Container maxWidth="xl">
         <Stack
           direction="row"
@@ -35,8 +37,8 @@ function Navbar() {
           <Link to="/">
             <img src={logo} alt="logo" height={27} />
           </Link>
-        </Stack>
         
+
         <Stack  direction={{ xs: "column", md: "row" }}
             spacing={4}
             alignItems={{ xs: "flex-start", md: "center" }}
@@ -55,6 +57,8 @@ function Navbar() {
               My Bookings
             </Button>
           </Link>
+
+          {/* for close button */}
           {isMobile && (
             <IconButton
               onClick={() => setMenuOpen(false)}
@@ -70,13 +74,16 @@ function Navbar() {
           )}
         </Stack>
 
+    {/* for Menu icon */}
         {isMobile && (
           <IconButton onClick={() => setMenuOpen(true)}>
             <MenuIcon />
           </IconButton>
         )}
+        </Stack>
       </Container>
-    </Box>
+   
+    </header>
   );
 }
 export default Navbar;
