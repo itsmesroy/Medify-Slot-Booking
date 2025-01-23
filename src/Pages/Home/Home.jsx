@@ -1,11 +1,16 @@
-import React ,{useState, useEffect} from "react";
+import React  from "react";
 import Navbar from "../Navbar/Navbar.jsx"
 import "./Home.css"
 import {Box, Container, Stack} from "@mui/material"
 import Heroslider from "../Heroslider/Heroslider.jsx"
 import SearchHospital from "../SearchHospital/SearchHospital.jsx";
 import HeroLayout from "../HeroLayout/HeroLayout.jsx"
-
+import Specialize from "../Specialize.jsx"
+import Offer from "../Offers.jsx"
+import Doctors from "../Doctors.jsx"
+import Patient from "../Patient.jsx"
+import Blogs from "../Blogs.jsx"
+import OurFamily from "../OurFamily.jsx"
 function Home(){
     return(
         <Box>
@@ -32,6 +37,12 @@ function Home(){
           </Stack>
                 </Container>
             </Box>
+          <Offer/>
+          <Specialize/>
+          <Doctors/>
+          <Patient/>
+            <Blogs/>
+            <OurFamily/>
         </Box>
     )
 }export default Home;

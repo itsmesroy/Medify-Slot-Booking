@@ -5,7 +5,7 @@ import pharmacyIcon from "../../assets/Drugstore.png";
 import hospitalIcon from "../../assets/Hospital.png";
 import capsuleIcon from "../../assets/Capsule.png";
 import ambulanceIcon from "../../assets/Ambulance.png";
-import HeroCard from "../HeroCard/HeroCard.jsx";
+import Card from "../Card/Card.jsx";
 
 
 export default function HeroServices() {
@@ -39,7 +39,7 @@ export default function HeroServices() {
       >
         {Services.map((service) => (
           <Grid item key={service.title} xs={4} md={2.4}>
-            <HeroCard
+            <Card
               img={service.img}
               title={service.title}
               active={service.active || false}

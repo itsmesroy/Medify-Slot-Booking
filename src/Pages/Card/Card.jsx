@@ -1,6 +1,7 @@
+// it is a child component for card
 import { Box, Stack, Typography } from "@mui/material";
 
-function HeroCard({
+function Card({
   img,
   title,
   bgColor,
@@ -27,4 +28,4 @@ function HeroCard({
       </Typography>
     </Stack>
   );
-} export default HeroCard;
+} export default Card;
