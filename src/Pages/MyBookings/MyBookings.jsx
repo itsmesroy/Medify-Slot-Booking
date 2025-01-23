@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Box, Typography, Container, Stack } from "@mui/material";
 import SearchBar from "../SearchBar.jsx";
-import HospitalCard from "../HospitalCard/HospitalCard";
-import Navbar from "../Navbar/Navbar";
-import cta from "../assets/cta.png";
+import HospitalCard from "../HospitalCard/HospitalCard.jsx";
+import Navbar from "../Navbar/Navbar.jsx";
+import cta from "../../assets/cta.png";
 
-export default function MyBookings() {
+function MyBookings() {
   const [bookings, setBookings] = useState([]);
   const [filteredBookings, setFilteredBookings] = useState([]);
 
@@ -94,3 +94,4 @@ export default function MyBookings() {
     </>
   );
 }
+export default MyBookings;

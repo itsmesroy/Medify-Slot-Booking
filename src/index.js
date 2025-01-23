@@ -5,7 +5,7 @@ import App from './App';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom';
 import {createTheme, ThemeProvider} from '@mui/material';
 import Home from './Pages/Home/Home.jsx'
-import Bookings from './Pages/Bookings/Bookings.jsx'
+import MyBookings from './Pages/MyBookings/MyBookings.jsx'
 import Search from './Pages/Search/Search.jsx'
 
 const router = createBrowserRouter([
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
     },
     {
       path: 'my-bookings',
-      element: <Bookings/>
+      element: <MyBookings/>
     },
     {
       path: '/',
