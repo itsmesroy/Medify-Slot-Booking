@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import { format } from "date-fns";
 
-export default function BookingModal({
+function BookingModal({
   setOpen,
   open,
   bookingDetails,
@@ -124,3 +124,4 @@ export default function BookingModal({
     </Modal>
   );
 }
+export default BookingModal;
